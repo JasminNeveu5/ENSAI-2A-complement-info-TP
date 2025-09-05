@@ -1,0 +1,6 @@
+from src.business_object.pokemon.abstract_pokemon import AbstractPokemon
+
+class Supporter_pokemon(AbstractPokemon):
+    def get_pokemon_attack_coef(self) -> float:
+        multiplier = 1 + (self.sp_atk_current + self.defense_current) / 200
+        return multiplier
